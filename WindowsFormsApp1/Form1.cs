@@ -170,7 +170,7 @@ namespace WindowsFormsApp1
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
-        {
+        {//search movie by title or actor
             SqlCommand cmd = new SqlCommand("SELECT * FROM Movies WHERE (Title = '" + textSearch.Text + "') OR (Actor = '" + textSearch.Text + "')", conn);
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Movies WHERE (Title = '" + textSearch.Text + "') OR (Actor = '" + textSearch.Text + "')", conn);
             DataSet ds = new DataSet();
